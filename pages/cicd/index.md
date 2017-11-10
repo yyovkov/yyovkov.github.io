@@ -1,5 +1,4 @@
-#CICD
-Continuous Integration and Continuous Delivery
+# Continuous Integration and Continuous Delivery
 
 ## CHEF
 * [CHEF Cookbooks Tips and Tricks](CHEF_Tips_and_Tricks.md)
