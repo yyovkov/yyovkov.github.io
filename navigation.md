@@ -19,8 +19,12 @@
   -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
   -->
 
-[About](pages/about.md)
-[Download](pages/download.md)
+[About](index.md)
+[Downloads](pages/download.md)
+[Topics]()
+  * [CICD](pages/cicd/index.md)
+  * [Monitoring](pages/monitoring/index.md)
+  * [Linux](pages/linux/index.md)
 
 <!-- A more complex navigation example: ----------------------------------------
 
