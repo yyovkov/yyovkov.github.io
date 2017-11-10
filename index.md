@@ -1,10 +1,5 @@
-# My First Page
+# About
 
+Ralo wiki is not an effort, it is collection of information an useful commandsets that I have collected during the time. The goal of this commands collection is to provide end solution, how to achieve technical goals.
 
-## Section 1
-Section one
-
-## Section 2
-Section Two
-
-note: This is very important message
+note: The information in this site is provided as-is and the autor is not responsible for your decisions and action caused by the notes published here. Unless other specified.
