@@ -52,6 +52,7 @@ $ docker-compose up
 ## Nodes certificates
 * All the nodes  that are going to use that repository should have installed
 self-signed certificate generated above
+
 ```bash
 $ sudo mkdir /etc/docker/certs.d/registry.castle.yyovkov.net
 $ sudo cp /etc/registry/certs/registry.crt /etc/docker/certs.d/registry.castle.yyovkov.net
