@@ -6,3 +6,6 @@ note: The information in this site is provided as-is and the autor is not respon
 
 ## Topics
 Here you will find infomration on different topics, for example Linux, Windows, Java application servers, Python and so on.
+
+## Information
+The information here can be shared safely.
