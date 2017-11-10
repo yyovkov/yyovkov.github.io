@@ -1,20 +1,24 @@
+# Docker Registry Setup
 ## Create Configuration Files
 ```bash
 $ sudo mkdir /etc/registry/nginx
 ```
 
-# Create password file for docker repository
+## Password file
+Create password file for docker repository
 ```bash
 $ docker run --rm --entrypoint htpasswd registry:2 -bn testuser testpassword > /etc/registry/htpasswd
 ```
 
-## Generate self-signed certificates to be used with repostiry
+## Self-signed certs
+Generate self-signed certificates to be used with repostiry
 ```bash
 $ cd /etc/registry/certs
 $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${hostname -s}.key -out ${hostname -s}.pem
 ```
 
-## Create Docker Compose File
+## Docker compose file
+Create Docker Compose File
 ```bash
 $ cd /etc/registry
 $ sudo tee docker-compose.yml << 'EOF'
@@ -45,8 +49,8 @@ $ cd /etc/registry
 $ docker-compose up
 ```
 
-## Enable self-signed certificates for docker nodes
-All the nodes the nodes that are going to use that repository should have installed
+## Nodes certificates
+* All the nodes  that are going to use that repository should have installed
 self-signed certificate generated above
 ```bash
 $ sudo mkdir /etc/docker/certs.d/registry.castle.yyovkov.net
