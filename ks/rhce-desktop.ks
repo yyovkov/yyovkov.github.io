@@ -62,7 +62,7 @@ logvol /  --fstype="xfs" --grow --percent=100 --name=root --vgname=vg_rhce-deskt
 
 %packages
 @^gnome-desktop-environment
-@core
+-gnome-initial-setup
 vim
 chrony
 kexec-tools
