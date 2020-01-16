@@ -30,6 +30,10 @@ lang en_US.UTF-8
 firewall --enabled --port=22:tcp --port=5901:tcp
 # Selinux settings
 selinux --enforcing
+# Accept EULA
+eula --agreed
+# Disable kernel dump
+kdump --disable
 # Reboot after install
 reboot
 
