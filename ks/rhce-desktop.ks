@@ -1,17 +1,17 @@
 # version
 # Press <tab> when the installation dvd boot and append below text after after
 # the "vmlinuz line":
-# inst.ks=http://castle.yyovkov.net/rhce-01.ks ksdevice=p2p1 ip=192.168.10.121 netmask=255.255.255.0 gateway=192.168.10.1 nameserver=8.8.8.8
+# inst.ks=http://www.yyovkov.net/ks/rhce-desktop.ks ksdevice=p2p1 ip=192.168.10.121 netmask=255.255.255.0 gateway=192.168.10.1 nameserver=8.8.8.8
 # System authorization information
 #
 # Install Command on KVM Server:
-# virt-install --name=LAB_rhce_01__59121 \
+# virt-install --name=LAB_rhce_desktop__59123 \
 # --location=/var/lib/virtpools/system/CentOS/CentOS-7.0-1406-x86_64-DVD.iso \
 # --disk "pool=local,size=99,sparse=false,perms=rw" \
-# --extra-args="ks=http://castle.yyovkov.net/rhce-01.ks ksdevice=eth0 ip=192.168.10.121 netmask=255.255.255.0 gateway=192.168.10.1 dns=192.168.10.3" \
+# --extra-args="ks=http://wiki.yyovkov.net/ks/rhce-desktop.ks ksdevice=eth0 ip=192.168.10.123 netmask=255.255.255.0 gateway=192.168.10.1 dns=192.168.10.3" \
 # --graphics "vnc,listen=0.0.0.0,port=59121" \
 # --network bridge=test0 \
-# --vcpus=2 --ram=1024 \
+# --vcpus=2 --ram=2048 \
 # --os-variant=centos7.0
 #
 auth --enableshadow --passalgo=sha512
