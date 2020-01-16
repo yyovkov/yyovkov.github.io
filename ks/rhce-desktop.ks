@@ -20,7 +20,7 @@ cdrom
 # Use graphical install
 graphical
 # Run the Setup Agent on first boot
-firstboot --enable
+firstboot --disable
 ignoredisk --only-use=vda
 # Keyboard layouts
 keyboard --vckeymap=us --xlayouts='us'
