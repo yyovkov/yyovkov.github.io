@@ -9,7 +9,7 @@
 # --location=/var/lib/virtpools/system/CentOS/CentOS-7.0-1406-x86_64-DVD.iso \
 # --disk "pool=local,size=99,sparse=false,perms=rw" \
 # --extra-args="ks=http://wiki.yyovkov.net/ks/rhce-desktop.ks ksdevice=eth0 ip=192.168.10.123 netmask=255.255.255.0 gateway=192.168.10.1 dns=192.168.10.3" \
-# --graphics "vnc,listen=0.0.0.0,port=59121" \
+# --graphics "vnc,listen=0.0.0.0,port=59123" \
 # --network bridge=test0 \
 # --vcpus=2 --ram=2048 \
 # --os-variant=centos7.0
@@ -57,8 +57,8 @@ clearpart --all --initlabel --drives=vda
 part /boot --fstype="xfs" --ondisk=vda --size=1024
 part swap --fstype="swap" --ondisk=vda --recommended
 part pv.01 --fstype="lvmpv" --ondisk=vda --size=1 --grow
-volgroup vg_rhce-01 --pesize=4096 pv.01
-logvol /  --fstype="xfs" --grow --percent=100 --name=root --vgname=vg_rhce-01
+volgroup vg_rhce-dekstop --pesize=4096 pv.01
+logvol /  --fstype="xfs" --grow --percent=100 --name=root --vgname=vg_rhce-desktop
 
 %packages
 @^gnome-desktop-environment
