@@ -57,8 +57,8 @@ clearpart --all --initlabel --drives=vda
 part /boot --fstype="xfs" --ondisk=vda --size=1024
 part swap --fstype="swap" --ondisk=vda --recommended
 part pv.01 --fstype="lvmpv" --ondisk=vda --size=1 --grow
-volgroup vg_rhce-dekstop --pesize=4096 pv.01
-logvol /  --fstype="xfs" --grow --percent=100 --name=root --vgname=vg_rhce-desktop
+volgroup vg_rhce-01 --pesize=4096 pv.01
+logvol /  --fstype="xfs" --grow --percent=100 --name=root --vgname=vg_rhce-01
 
 %packages
 @^gnome-desktop-environment
