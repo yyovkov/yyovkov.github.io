@@ -33,7 +33,7 @@ selinux --enforcing
 # Accept EULA
 eula --agreed
 # Disable kernel dump
-kdump --disable
+# Kdump --disable
 # Reboot after install
 reboot
 
@@ -77,24 +77,8 @@ kexec-tools
 ################################################################################
 ################################################################################
 %post
-
-################################################################################
-# xterm window name change
-cat > /etc/sysconfig/bash-prompt-xterm << 'EOF'
-# File: /etc/sysconfig/bash-prompt-xterm
-# Description:
-#   This file changes the name of the window, while xterm is used (for example
-#   using ssh connection to the host)
-WINDOW_NAME="${USER}@${HOSTNAME}"
-echo -ne "\033]0;${WINDOW_NAME}\007"
-EOF
-chmod +x /etc/sysconfig/bash-prompt-xterm
-
 ################################################################################
 # Setting ssh-access to the server
-#       * Enable ssh forwarding
-#       * Disable Root Login
-#       * Allow only "sshaccess" group  members to access via ssh
 #       * Disable sshd naming resolution
 cp /etc/ssh/sshd_config /etc/ssh/.orig-sshd_config
 sed -i -e 's/GSSAPIAuthentication\ yes/\#GSSAPIAuthentication\ yes/g' \
