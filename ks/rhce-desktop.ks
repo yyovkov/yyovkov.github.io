@@ -80,12 +80,11 @@ kexec-tools
 ################################################################################
 # Setting ssh-access to the server
 #       * Disable sshd naming resolution
-cp /etc/ssh/sshd_config /etc/ssh/.orig-sshd_config
-sed -i -e 's/GSSAPIAuthentication\ yes/\#GSSAPIAuthentication\ yes/g' \
+sed -i -e 's/GSSAPIAuthentication\ yes/\GSSAPIAuthentication\ no/g' \
     -e '/#X11UseLocalhost yes/a X11UseLocalhost no' \
     /etc/ssh/sshd_config
 echo "
 UseDNS no
-GSSAPIAuthentication no" >> /etc/ssh/sshd_config
+" >> /etc/ssh/sshd_config
 
 %end
